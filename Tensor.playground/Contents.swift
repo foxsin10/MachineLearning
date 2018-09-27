@@ -14,9 +14,10 @@ struct MLPClassifier {
 
 let input = Tensor<Float>([[0.2, 0.8]])
 let classifier = MLPClassifier()
-//let prediction = classifier.prediction(for: input)
-////print(prediction)
+// let prediction = classifier.prediction(for: input)
+// print(prediction)
 //
+
 print(classifier.w1)
 print(classifier.w2)
 
@@ -25,4 +26,9 @@ print(cc)
 
 let a = Tensor<Float>([[2]])
 let b = Tensor<Float>(shape: [2, 2], scalars: [0.5, 0.5, 1.0, 3.0])
+let c = Tensor<Float>(shape: [1, 2], scalars: [0.3, 0.1])
+let d = c.reshaped(to: [1, 2])
+//let plus = c * b
+
+let test = c + b
 
